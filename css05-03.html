@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 5-3</title>
+    <style>
+        #div1 table { 
+            border : 1px solid blue;
+            border-collapse: collapse;}
+        #div1 td, #div1 th { border : 1px dotted seagreen;}
+        #div1 thead th { height : 40px;
+            width :100px;}
+        #div2 table { 
+            border-collapse: collapse;
+        }
+        #div2 td, #div2 th { 
+            text-align: left;
+            padding : 10px;
+            height : 20px;
+            width : 100px;
+        }
+        #div2 thead{
+            background-color: darkgray;
+            /* color 속성이 상속되어 th 태그에게까지 상속됨 */
+            color : yellow;
+        }
+        #div2 td, #div2 tfoot th{
+            border-bottom : 1px solid gray
+        }
+        /* 줄무늬 만들기 */
+        #div3 thead, #div3 tfoot { 
+            background-color: darkgray;
+            color : yellow;
+        }
+        #div3 tbody tr:nth-child(even) {
+            background-color : deepskyblue; 
+        }
+        #div3 table { 
+            border-collapse: collapse;
+        }
+        #div3 tbody tr:hover {
+            background-color: pink;
+        }
+        #div4 input[type="text"]{
+            color : blue;
+        }
+       
+        #div4 label input[type="text"]{
+            border : 2px solid skyblue;
+            border-radius: 5px;
+        }
+        #div4 input[type="text"]:hover{
+            background: cornflowerblue;
+        }
+        #div4 input[type="text"]:focus{
+            font-size : 1.2em;       
+        }
+    </style>
+</head>
+<body>
+    <h3>table 꾸미기</h3>
+    <div id="div1">
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>80</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>95</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th>175</th>
+                <th>169</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    <br><br><br>
+    <div id="div2">
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>80</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>95</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th>175</th>
+                <th>169</th>
+            </tr>
+        </tfoot>
+    </table>
+</div><br><br><br><br>
+<div id="div3">
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>80</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>95</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>이병은</td>
+                <td>85</td>
+                <td>90</td>
+            </tr><tr>
+                <td>김남윤</td>
+                <td>50</td>
+                <td>40</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th>310</th>
+                <th>249</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<br><hr><br>
+
+<h3>폼 꾸미기</h3>
+<div id = "div4">
+    <label for="text1">이름:</label>
+    <input type="text" id="text1" placeholder="이름을 입력하세요"><br>
+
+    <label>
+        이름: <input type="text" id="text2" placeholder="이름을 입력하세요">
+    </label>
+
+</div>
+
+</body>
+</html>

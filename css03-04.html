@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3-4</title>
+    <style>
+        div{font:normal 24px verdana;}
+        .dropText { text-shadow: 3px 3px;}
+        .redText { text-shadow:3px 3px red;}
+        .blurText{ text-shadow: 3px 3px 5px skyblue;}
+        .wordArtEffect{color:white; 
+                        text-shadow: 0px 0px 3px darkblue;}
+        .glowEffect{text-shadow: 0px 0px 3px red;}
+        .threeDEffect{color: white; text-shadow:2px 2px 4px black;}
+        .multipleEffect{color: yellow; text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+
+        .redBox { box-shadow: 10px 10px red;}
+        .blurBox{box-shadow: 10px 10px 5px;}
+        .multipleEffect{box-shadow: 2px 2px 2px black, 0 0 25px blue, 0, 0, 5px darkblue;}
+        test{
+            width:150px;
+            height:70px;
+            padding:10px;
+            border:10px solid lightgray;
+            background-image: url("./펭수3.jpg");
+            background-size: 150px 150px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h3>text-shadow</h3>
+    <div class="dropText">Drop Shadow</div>
+    <div class="redText">Color Shadow</div>
+    <div class="blurText">Blur Shadow</div>
+    <div class="glowEffect">Glow Shadow</div>
+    <div class="wordArtEffect">WordArt Effect</div>
+    <div class="threeDEffect">3D Effect</div>
+    <div class="multipleEffect">Multiple Shadow Effect</div>
+
+    <br><hr><br>
+
+    <h3>box shadow</h3>
+    <div class="redBox">뚱이와 함께</div>
+    <div class="blurBox">뚱이와 함께</div>
+    <div class="multiEffect">뚱이와 함께</div>
+
+</body>
+</html>

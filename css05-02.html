@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 5-2</title>
+    <style>
+        div > ul{
+            background-color: goldenrod;
+            padding : 10px 10px 10px 50px;
+            list-style-position: inside;
+            list-style-type: decimal;
+            list-style-image: url("펭수1.jpg");
+        }
+        div > ul li {
+            background-color : greenyellow;
+            margin-bottom: 5px;
+        }
+        #menubar {
+            background-color : olive;
+        }
+        #menubar ul { 
+            margin : 0;
+            padding : 0;
+            width : 567px;
+        }
+
+        #menubar ul li {
+            display : inline;
+            list-style-type: none;
+            padding : 0px 15px;
+        }
+        #menubar ul li a{
+            color : white;
+            text-decoration: none;
+        }
+
+        #menubar ul li a:hover{
+            color : violet;
+        }
+    </style>
+</head>
+<body>
+    <h3>list-style 변경하기</h3>
+    <div>
+        <ul>
+            <li>에스프레소</li>
+            <li>카푸치노</li>
+            <li>카페라떼</li>
+        </ul>
+    </div>
+    <br><hr><br>
+    <!-- <nav> : 시맨틱 태크로써 div 태그와 동일한 기능을 가지고 있으나 네비게이션바 및 메뉴를 생성할 때 사용하는 태그 -->
+    <nav id ="menubar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Espresso</a></li>
+            <li><a href="#">Cappuccino</a></li>
+            <li><a href="#">Cafe Laffe</a></li>
+            <li><a href="#">F.A.O</a></li>
+        </ul>
+
+    </nav>
+</body>
+</html>

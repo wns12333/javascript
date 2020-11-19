@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 1-6(class 선택자)</title>
+    <style>
+        p{ font-size: 24px;}
+        .cls1 {
+            font-size: 32px;
+            color: lightblue;}
+        .cls2 { 
+            font-family: '궁서체';
+            color: orangered;
+        }
+
+        #idp {
+            color: palegreen;
+            font-weight: bold;
+            font-size: large;
+            font-family: sans-serif;
+
+        }
+        html, body{
+            padding: 0;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>class 선택자</h3>
+    <!-- 클래스 선택자는 . 기호 사용 -->
+    <!-- html 태그의 클래스 속성의 값은 중복해서 사용할 수 있음 -->
+    <!-- html 태그의 클래스 속성값은 태그의 종류에 상관없이 사용할 수 있음 -->
+    <p>클래스가 없는 p 태그</p>
+    <p class="cls1">클래스가 cls1는 p 태그</p>
+    <p class="cls2">클래스가 cls2는 p 태그</p>
+    <p id="idp">id가 idp인 p 태그</p>
+    <p id="idp" class="cls1">id가 idp p 태그</p>
+    <h4 class="cls1">클래스가 cls1인 h4 태그</h4>
+    <h4 id="idp">id가 idp인 h4 태그</h4>
+    <h5 class="cls2">클래스가 cls2인 h5 태그</h5>
+    
+    <ul>
+        <li class="cls1">클래스가 cls1인 li 태그</li>
+        <li class="cls1">클래스가 cls1인 li 태그</li>
+        <li class="cls2">클래스가 cls2인 li 태그</li>
+    </ul>
+</body>
+</html>

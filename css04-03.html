@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 4-3</title>
+    <style>
+        /* 
+        float : html 태그를 띄워서 화면의 왼쪽 혹은 오른쪽에 떠있도록 하는 속성 
+        속성 값 : left, right / float 속성을 사용 후 반드시 clear 속성을 사용하여 다른 태그에 영향이 없도록 해야 함 */
+        /* clear : float 속성을 제거하여 기존의 형태로 되돌리는 속성 = none(기본값), left, right, both(양쪽 제거)) */
+        #float2 img {
+            float: left;
+        }
+
+        #float3 img {
+            float: right;
+        }
+
+        #float4 img {
+            float: none;
+        }
+
+        /* clear 사용 */
+        .div1,
+        .div3 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid yellowgreen;
+        }
+
+        .div2,
+        .div4 {
+            border: 1px solid red;
+        }
+
+        .div4 {
+            clear: left;
+        }
+
+        /* float 속성을 사용 시 부모 태그의 영역보다 자손 태그의 크기가 경우 자손 태그의 컨첸츠가 부모 태그의 영역을 벗어나서 화면에 출력 */
+        /* 이러한 현상을 해결하는 것을 clearfix라 함 */
+        #cf>div {
+            border: 3px solid yellowgreen;
+            padding: 5px;
+        }
+
+        #cf .img1 {
+            float: right;
+        }
+
+        #cf .clearfix {
+            overflow: auto;
+        }
+
+        #cf>p {
+            clear: right;
+        }
+
+        #cf .img2 {
+            float: left;
+        }
+
+        #cf .clearfix2::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>float 사용하기</h3>
+    <div id="float1">
+        <p><img src="./펭수1.jpg">모든 국민은 양심의 자유를 가진다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다.</p>
+    </div>
+    <hr>
+    <div id="float2">
+        <p><img src="./펭수1.jpg">모든 국민은 양심의 자유를 가진다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다.</p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="float3">
+        <p><img src="./펭수1.jpg">모든 국민은 양심의 자유를 가진다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다.</p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="float4">
+        <p><img src="./펭수1.jpg">모든 국민은 양심의 자유를 가진다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다.</p>
+    </div>
+
+    <div>
+        <h3>without clear</h3>
+        <div class="div1">div1</div>
+        <div class="div2">div2, clear 속성을 사용하지 않을 경우 기존의 float 속성의 영향으로 인하여 UI가 정상적으로 출력되지 않는 현상 발생</div>
+        <br><br><br>
+        <h3>with clear</h3>
+        <div class="div3">div3</div>
+        <div class="div4">div4, clear 속성을 사용하여 기존의 float 속성을 해제하면 UI가 원하는 형태대로 출력 됨</div>
+    </div>
+    <br><br><br><br>
+
+    <h3>clearfix 사용하기</h3>
+    <div id="cf">
+        <div>
+            <img class="img1" src="./펭수1.jpg" alt="" width="150" height="150"> 클리어 픽스를 사용하지 않아서 부모 영역에서 벗어나는 컨텐츠
+        </div>
+        <p>여기에서 clear:right를 사용하여 float 속성을 초기화</p>
+        <div class="clearfix">
+            <img class="img1" src="./펭수1.jpg" alt="" width="150" height="150"> 클리어 픽스를 사용하여 부모 영역에서 벗어나지 않는 컨텐츠
+        </div>
+
+        <p style="clear:both;">위의 예제 float 초기화</p>
+        <hr>
+        <h3>clearfix 다른 방식(clear속성 사용의 다른 방식)</h3>
+        <div>
+            <img class="img2" src="./펭수2.jpg" alt="" width="50px" ; height="50px"> 클리어 픽스를 사용하여 부모 영역에서 벗어나지 않는 컨텐츠
+        </div>
+        <p>위의 float 속성을 초기화</p>
+        <div class="clearfix2">
+            <img class="img2" src="./펭수3.jpg" alt="" width="110px" ; height="110px"> 클리어 픽스를 사용하여 부모 영역에서 벗어나지 않는 컨텐츠
+        </div>
+    </div>
+</body>
+</html>

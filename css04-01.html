@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 4-1</title>
+    <style>
+        #dp-block .box{
+            width : 300px;
+            height : 200px;
+            border : 1px solid black;
+        }
+        #dp-block span { 
+            width : 100px;
+            height : 60px;
+            border : 1px solid red;
+            background-color: skyblue;        }
+
+        #dp-block .type1 > span {display : inline;} 
+        #dp-block .type2 > span {display : block;}
+        #dp-inblock .box {
+            width : 300px;
+            height : 200px;
+            border: 1px solid black;
+            padding : 5px;
+        }
+        #dp-inline div{
+            border : 2px dotted red;
+            background-color : skyblue;
+        }
+        #dp-inline .type1 > div {display:block;}
+        #dp-inline .type2 > div {display:inline;}
+        .type3 p { margin: 0; 
+                    padding: 0;}
+        .type3 span { 
+            border: 2px solid black;
+        }
+        #p2{
+           
+          
+
+        }
+        #span1 {
+            padding : 30px;
+            border : 2px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <h3>display : block</h3>
+    <div id="dp-block">
+        <h4>span 태그가 display:inline</h4>
+        <div class="box type1">
+            <span>inline span</span>과
+            <span>inline span</span>입니다.
+        </div>
+        <br>
+        <h4>span 태그가 display:block</h4>
+        <div class="box type2">
+            <span>block span</span>과
+            <span>block span</span>입니다.
+    </div>
+    <br><hr><br>
+    <h3>display:inline</h3>
+    <div id="dp-inline">
+        <h4>div 태그가 display:block</h4>
+        <div class="box type1">
+            <div>block DIV</div>
+            <div>block DIV</div>
+            <div>block DIV</div>
+        </div>
+        <br>
+        <h4>div 태그가 display:inline</h4>
+        <div class="box type2">
+            <div>block DIV</div>
+            <div>block DIV</div>
+            <div>block DIV</div>
+        </div>
+    </div>
+    <!-- 버튼 태그의 display 변경하기 -->
+    <div>
+        <div>
+            <button style="width: 100%;">원본 형태의 버튼</button>
+            <button style="display:block; width: 100%;">block 타입의 버튼</button>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div>
+        <h3>display block과 inline의 차이</h3>
+        <div class="type3">
+            <p id="p1">display block과 inline의 차이</p>
+            <p id="p2">display <span id="span1">block</span>과 inline의 차이</p>
+            <p id="p3">display block과 inline의 차이</p>
+        </div>
+    </div>
+    <br><hr><br>
+    <h3>display:inline-block</h3>
+    <div id="dp-inblock">
+        <div class="box type1">
+            <h4>inline type</h4>
+            <div>inline div</div>
+            <div>inline div</div>
+            <div>inline div</div>
+        </div>
+        <div class="box typw2">
+            <h4>inline-block type</h4>
+            <div>inline-block div</div>
+            <div>inline-block div</div>
+            <div>inline-block div</div>            
+        </div>
+        <div class="box type3">
+            <h4>block type</h4>
+            <div>block div</div>
+            <div>block div</div>
+            <div>block div</div>
+        </div>
+    </div>
+</body>
+</html>
